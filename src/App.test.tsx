@@ -1,9 +1,6 @@
 import { render } from '@testing-library/react';
-import {App, AppRouter} from './App';
+import App from './App';
 
 test('renders learn react link', () => {
-  render(<AppRouter>
-    <App />
-    </AppRouter>
-  );
+  render(<App />);
 });
