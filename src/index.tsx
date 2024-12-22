@@ -15,13 +15,17 @@ const router = createBrowserRouter(
     element: <App />,
     children: [
       {path: '',
-      element: <Home />},
+      element: <Home />,
+    loader: () => import('./pages/Home/Home')},
       {path: 'about',
-      element: <About />},
+      element: <About />,
+    loader: () => import('./pages/About/About')},
       {path: 'services',
-      element: <Services />},
+      element: <Services />,
+    loader: () => import('./pages/Services/Services')},
       {path: 'contact',
-      element: <Contact />},
+      element: <Contact />,
+    loader: () => import('./pages/Contact/Contact')},
     ]
   }]
 );
