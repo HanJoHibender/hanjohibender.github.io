@@ -35,8 +35,8 @@
 }
 
 .service-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-lg) !important;
     border-color: var(--primary-soft);
 }
 
@@ -46,19 +46,17 @@
 
 .service-icon-wrapper {
     display: inline-flex;
-    padding: 16px;
-    border-radius: 16px;
+    padding: 12px;
+    border-radius: 12px;
     background-color: var(--primary-soft);
     color: var(--primary-color);
     transition: all 0.3s ease;
-    margin-bottom: 24px;
 }
 
 .service-card:hover .service-icon-wrapper {
     background-color: var(--primary-color);
     color: var(--white);
-    transform: scale(1.1) rotate(8deg);
-    box-shadow: 0 10px 15px -3px rgba(0, 130, 136, 0.3);
+    transform: scale(1.1) rotate(5deg);
 }
 
 /* Background decoration */

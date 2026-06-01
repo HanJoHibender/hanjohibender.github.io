@@ -17,12 +17,21 @@ interface ServiceItemProps {
 const ServiceItem: React.FC<ServiceItemProps> = ({ title, description, icon }) => (
     <Card className="service-card" sx={{ height: '100%', borderRadius: 4, transition: 'all 0.3s ease' }}>
         <CardContent sx={{ p: 4 }}>
-            <Box className="service-icon-wrapper" sx={{ mb: 3 }}>
-                {icon}
+            <Box sx={{ display: 'flex', alignItems: 'center', gap: 2, mb: 3 }}>
+                <Box className="service-icon-wrapper">
+                    {icon}
+                </Box>
+                <Typography 
+                    variant="h5" 
+                    component="h3" 
+                    sx={{ 
+                        fontWeight: 700,
+                        fontFamily: 'Outfit, sans-serif'
+                    }}
+                >
+                    {title}
+                </Typography>
             </Box>
-            <Typography variant="h5" component="h3" gutterBottom sx={{ fontWeight: 700 }}>
-                {title}
-            </Typography>
             <Typography variant="body1" color="text.secondary" sx={{ lineHeight: 1.7 }}>
                 {description}
             </Typography>
@@ -34,7 +43,13 @@ const Services: React.FC = () => {
     return (
         <Container maxWidth="lg" className="services-page-container" sx={{ py: 8 }}>
             <Box sx={{ textAlign: 'center', mb: 8 }}>
-                <Typography variant="h2" component="h1" gutterBottom sx={{ fontWeight: 800 }}>
+                <Typography variant="h2" component="h1" gutterBottom sx={{ 
+                    background: 'linear-gradient(135deg, var(--primary-color) 0%, var(--primary-dark) 100%)',
+                    WebkitBackgroundClip: 'text',
+                    WebkitTextFillColor: 'transparent',
+                    fontWeight: 800,
+                    fontFamily: 'Outfit, sans-serif'
+                }}>
                     Our Services
                 </Typography>
                 <Typography variant="h5" color="text.secondary" sx={{ maxWidth: '800px', mx: 'auto' }}>
@@ -47,28 +62,28 @@ const Services: React.FC = () => {
                     <ServiceItem 
                         title="Musical Programming" 
                         description="Custom programming and sound design within DAWs. We create unique musical outputs through technical innovation in sound synthesis and arrangement."
-                        icon={<MusicIcon sx={{ fontSize: 40 }} />}
+                        icon={<MusicIcon sx={{ fontSize: 32 }} />}
                     />
                 </Grid>
                 <Grid size={{ xs: 12, md: 6 }}>
                     <ServiceItem 
                         title="Custom Code & Web Development" 
                         description="Writing bespoke code and creating modern, functional websites. We build robust, scalable solutions tailored exactly to your business needs."
-                        icon={<CodeIcon sx={{ fontSize: 40 }} />}
+                        icon={<CodeIcon sx={{ fontSize: 32 }} />}
                     />
                 </Grid>
                 <Grid size={{ xs: 12, md: 6 }}>
                     <ServiceItem 
                         title="Interactive Thinking Sessions" 
                         description="Facilitated deep-dives for philosophical individuals. We explore the existence of humanity, the future of AI, and other existential concepts in a collaborative environment."
-                        icon={<ThinkingIcon sx={{ fontSize: 40 }} />}
+                        icon={<ThinkingIcon sx={{ fontSize: 32 }} />}
                     />
                 </Grid>
                 <Grid size={{ xs: 12, md: 6 }}>
                     <ServiceItem 
                         title="Growth Consulting" 
                         description="Strategic guidance to help your company grow. We combine technical solutions with creative thinking to unlock new opportunities and optimize your workflow."
-                        icon={<GrowthIcon sx={{ fontSize: 40 }} />}
+                        icon={<GrowthIcon sx={{ fontSize: 32 }} />}
                     />
                 </Grid>
             </Grid>
