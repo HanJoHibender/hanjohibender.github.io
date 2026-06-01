@@ -6,6 +6,10 @@ on:
     branches: ["master"]
   workflow_dispatch:
 
+# Opt into Node.js 24 for all actions as Node 20 is deprecated
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+
 # Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
 permissions:
   contents: read
@@ -13,7 +17,6 @@ permissions:
   id-token: write
 
 # Allow only one concurrent deployment, skipping runs queued between the run in-progress and latest queued.
-# However, do NOT cancel in-progress runs as we want to allow these production deployments to complete.
 concurrency:
   group: "pages"
   cancel-in-progress: false
@@ -28,7 +31,7 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
-          node-version: 20
+          node-version: 24
           cache: 'npm'
 
       - name: Install dependencies
