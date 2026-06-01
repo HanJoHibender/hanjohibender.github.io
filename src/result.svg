@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="48" height="48" version="1.1" viewBox="0 0 12.7 12.7" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<defs>
+<linearGradient id="a">
+<stop stop-color="#3fe64c" offset="0"/>
+<stop stop-color="#fff" offset="1"/>
+</linearGradient>
+<linearGradient id="c" x1="3.4973" x2="9.5265" y1="4.0037" y2="9.8589" gradientTransform="matrix(.97992 0 0 .97992 .1275 .1275)" gradientUnits="userSpaceOnUse">
+<stop stop-color="#008288" offset="0"/>
+<stop stop-color="#a4e200" stop-opacity=".49091" offset="1"/>
+</linearGradient>
+<linearGradient id="b" x1="7.0262" x2="4.2569" y1="8.1181" y2="5.1431" gradientUnits="userSpaceOnUse">
+<stop stop-color="#fff" stop-opacity=".47273" offset="0"/>
+<stop stop-color="#fffb9c" stop-opacity="0" offset="1"/>
+</linearGradient>
+<linearGradient id="d" x1="2.7636" x2="8.8567" y1="4.2042" y2="4.2042" gradientUnits="userSpaceOnUse" xlink:href="#a"/>
+</defs>
+<circle cx="6.35" cy="6.35" r="6.2225" fill="url(#c)" stroke="#3f6e6f" stroke-width=".25499"/>
+<path transform="translate(-2.7219 3.7663)" d="m7.137 5.3963c-0.098385-0.11187 0.10226-0.18782 0.18594-0.16352 0.22676 0.065833 0.24484 0.36286 0.1411 0.53541-0.18556 0.30865-0.61663 0.31855-0.88487 0.11869-0.39365-0.29331-0.3947-0.87394-0.096268-1.2343 0.39777-0.48035 1.1325-0.47191 1.5838-0.073849 0.5679 0.50092 0.54967 1.3917 0.051431 1.9333-0.60343 0.65591-1.6512 0.62774-2.2827 0.029012-0.74421-0.70558-0.70602-1.911-0.0065941-2.6322 0.80751-0.83269 2.1708-0.78443 2.9817 0.015824 0.9213 0.9093 0.86293 2.4308-0.038243 3.3311-1.011 1.01-2.6909 0.9415-3.6806-0.060661-1.0988-1.1126-1.0201-2.951 0.08308-4.0301" fill="url(#b)" fill-rule="evenodd" stroke-opacity="0"/>
+<g fill="url(#d)" stroke-opacity="0">
+<rect x="5.0639" y="1.7724" width=".3165" height="4.1144" style="paint-order:markers stroke fill"/>
+<rect x="5.0798" y="1.7566" width="3.6081" height=".30067" style="paint-order:markers stroke fill"/>
+<rect x="8.403" y="1.7566" width=".3165" height="4.1144" style="paint-order:markers stroke fill"/>
+<ellipse cx="4.1382" cy="5.8156" rx="1.2422" ry=".78333" style="paint-order:markers stroke fill"/>
+<ellipse cx="7.4821" cy="5.8686" rx="1.2422" ry=".78333" style="paint-order:markers stroke fill"/>
+</g>
+</svg>
