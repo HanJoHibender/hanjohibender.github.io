@@ -1,36 +1,87 @@
-/* Services.css */
+/* src/pages/Services/Services.css */
 
-.services-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 20px;
-    background-color: #f5f5f5;
+.services-page-container {
+    animation: slideInUp 0.8s ease-out;
+}
+
+@keyframes slideInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 .service-card {
-    background-color: #ffffff;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
-    margin: 10px;
-    padding: 20px;
-    width: 100%;
-    max-width: 400px;
-    transition: box-shadow 0.3s ease;
+    border: 1px solid var(--border-color);
+    position: relative;
+    overflow: hidden;
+    background-color: var(--bg-paper);
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1) !important;
+}
+
+.service-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 6px;
+    height: 0;
+    background: linear-gradient(to bottom, var(--primary-color), var(--secondary-color));
+    transition: height 0.4s ease;
 }
 
 .service-card:hover {
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transform: translateY(-10px);
+    box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+    border-color: var(--primary-soft);
 }
 
-.service-title {
-    font-size: 1.5em;
-    font-weight: 500;
-    margin-bottom: 10px;
-    color: #333;
+.service-card:hover::before {
+    height: 100%;
 }
 
-.service-description {
-    font-size: 1em;
-    color: #666;
+.service-icon-wrapper {
+    display: inline-flex;
+    padding: 16px;
+    border-radius: 16px;
+    background-color: var(--primary-soft);
+    color: var(--primary-color);
+    transition: all 0.3s ease;
+    margin-bottom: 24px;
+}
+
+.service-card:hover .service-icon-wrapper {
+    background-color: var(--primary-color);
+    color: var(--white);
+    transform: scale(1.1) rotate(8deg);
+    box-shadow: 0 10px 15px -3px rgba(0, 130, 136, 0.3);
+}
+
+/* Background decoration */
+.services-page-container::before {
+    content: '';
+    position: fixed;
+    top: 20%;
+    left: -5%;
+    width: 400px;
+    height: 400px;
+    background: radial-gradient(circle, var(--primary-soft) 0%, transparent 70%);
+    z-index: -1;
+    pointer-events: none;
+}
+
+.services-page-container::after {
+    content: '';
+    position: fixed;
+    bottom: 10%;
+    right: -5%;
+    width: 500px;
+    height: 500px;
+    background: radial-gradient(circle, var(--secondary-soft) 0%, transparent 70%);
+    z-index: -1;
+    pointer-events: none;
 }

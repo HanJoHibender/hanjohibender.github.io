@@ -1,39 +1,48 @@
-/* /home/sechi/projects/hibender.io/hibender/src/Pages/About/About.css */
-
-.about-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 20px;
-    background-color: #f5f5f5;
-    color: #333;
-    font-family: 'Roboto', sans-serif;
+.about-page-container {
+    animation: fadeIn 0.8s ease-out;
 }
 
-.about-header {
-    font-size: 2rem;
-    margin-bottom: 20px;
-    color: #3f51b5;
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
-.about-content {
-    font-size: 1rem;
-    line-height: 1.6;
-    max-width: 800px;
-    text-align: center;
+.about-subheader {
+    position: relative;
+    transition: all 0.3s ease;
+    color: var(--primary-dark) !important;
 }
 
-.about-button {
-    margin-top: 20px;
-    padding: 10px 20px;
-    background-color: #3f51b5;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
+.about-subheader:hover {
+    padding-left: 20px;
+    color: var(--secondary-color) !important;
 }
 
-.about-button:hover {
-    background-color: #303f9f;
+.about-subheader::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 0;
+    width: 40px;
+    height: 3px;
+    background-color: var(--secondary-color);
+    transition: width 0.3s ease;
+}
+
+.about-subheader:hover::after {
+    width: 60px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+    .about-page-container {
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
 }
