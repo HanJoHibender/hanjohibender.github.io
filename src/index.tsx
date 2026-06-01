@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import { createBrowserRouter, RouterProvider, Navigate } from 'react-router-dom';
+import { createHashRouter, RouterProvider, Navigate } from 'react-router-dom';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import Home from './pages/Home/Home';
 import About from './pages/About/About';
@@ -75,7 +75,7 @@ const theme = createTheme({
   },
 });
 
-const router = createBrowserRouter(
+const router = createHashRouter(
   [{
     path: '/',
     element: <App />,
